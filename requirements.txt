@@ -1,0 +1,117 @@
+# MuJoCo + JAX + Brax 강화학습 환경
+# Python 3.10+ 권장
+# 생성일: 2025-01-XX
+# 환경: mujoco_env (conda)
+
+# ===== 핵심 패키지 =====
+# JAX (CUDA 12 지원)
+jax[cuda12]==0.6.2
+jaxlib==0.6.2
+
+# MuJoCo
+mujoco==3.4.0
+mujoco-mjx==3.4.0
+
+# Brax (강화학습)
+brax==0.14.0
+
+# DeepMind Control Suite
+dm-control==1.0.36
+dm-env==1.6
+dm-tree==0.1.9
+
+# ===== 선택적 패키지 =====
+# Warp (GPU 가속)
+warp-lang==1.11.0
+mujoco-warp==0.0.2
+
+# ===== 머신러닝 프레임워크 =====
+# PyTorch (CUDA 12 지원)
+torch==2.10.0
+
+# Flax (신경망)
+flax==0.10.7
+
+# Orbax (체크포인트)
+orbax-checkpoint==0.11.32
+
+# JAX 최적화
+jaxopt==0.8.5
+optax==0.2.6
+
+# ===== 제어 및 최적화 =====
+# Python Control Systems Library
+control==0.10.2
+
+# QP Solver (IK용)
+daqp==0.7.2
+qpsolvers==4.8.2
+
+# Mink (IK 라이브러리)
+mink==1.0.0
+
+# Loop Rate Limiter
+loop-rate-limiters==1.2.0
+
+# ===== 수치 계산 =====
+numpy==2.2.6
+scipy==1.15.3
+sympy==1.14.0
+
+# ===== 시각화 =====
+matplotlib==3.10.8
+mediapy==1.2.5
+imageio==2.37.2
+imageio-ffmpeg==0.6.0
+moviepy==2.2.1
+
+# ===== 3D 처리 =====
+trimesh==4.11.1
+
+# ===== 유틸리티 =====
+# 파일 처리
+etils==1.13.0
+
+# 설정 관리
+ml-collections==1.1.0
+
+# 진행 표시
+tqdm==4.67.2
+
+# 로깅
+tensorboardX==2.6.4
+
+# ===== 개발 도구 =====
+# Jupyter
+jupyter==1.1.1
+jupyterlab==4.5.3
+ipykernel==7.1.0
+ipywidgets==8.1.8
+
+# 테스트
+pytest==9.0.2
+
+# ===== 설치 방법 =====
+# 1. Conda 환경 생성:
+#    conda create -n mujoco_env python=3.10
+#    conda activate mujoco_env
+#
+# 2. CUDA 12 설치 (GPU 사용 시):
+#    conda install -c nvidia cuda-toolkit=12.8
+#
+# 3. 패키지 설치:
+#    pip install -r requirements.txt
+#
+# 4. 또는 최소 설치:
+#    pip install "jax[cuda12]" mujoco-mjx brax dm-control
+#    pip install mink qpsolvers daqp
+#    pip install matplotlib numpy scipy
+#
+# 5. 설치 확인:
+#    python -c "import mujoco; import jax; import mink; print('OK')"
+
+# ===== 주의사항 =====
+# - CUDA 12.x 필요 (GPU 사용 시)
+# - Python 3.10 이상 권장
+# - mink는 mujoco 3.x 이상 필요
+# - ROS2 패키지는 별도 설치 필요 (선택사항)
